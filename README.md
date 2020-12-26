@@ -14,5 +14,5 @@ A higher number on processedRowsPerSecond will increase the number of rows per s
 2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
 
 Taking into account the parameter processedRowsPerSecond I check the following properties key/values:
-- spark.default.parallelism : 3 (using a machine with 2 cores CPU) 
-- spark.streaming.kafka.maxRatePerPartition : 10
+- spark.default.parallelism: 3 (using a machine with 2 cores CPU) 
+- spark.streaming.kafka.maxRatePerPartition: 10
