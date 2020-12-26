@@ -1,6 +1,6 @@
-Data Streaming Nanodegree
+<h1>Data Streaming Nanodegree</h1>
 
-SF Crime Statistics with Spark Streaming (Step 3)
+<h3>SF Crime Statistics with Spark Streaming (Step 3)</h3>
 
 1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
 
