@@ -1,0 +1,26 @@
+RUN
+
+STEP 1:
+---------------------------------------------------------------------------------
+In different terminals:
+
+# Run Kafka
+/usr/bin/zookeeper-server-start config/zookeeper.properties
+/usr/bin/kafka-server-start config/server.properties
+
+# Run producer
+python kafka_server.py
+
+python producer_server.py
+
+# Check produced data using kafka-console-consumer
+kafka-console-consumer --bootstrap-server localhost:9092 --topic police.calls --from-beginning
+
+# OP: Run consumer server
+python consumer_server.py
+
+
+STEP 2:
+---------------------------------------------------------------------------------
+# Run app
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] data_stream.py
